@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ჩემი ფოტოები | ჩემი ხედვა</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #FBF4F6;
+    color: #2B2B2B;
+}
+
+/* HEADER */
+header {
+    padding: 24px 70px;
+    background: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #B45A6A;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+/* PAGE */
+section {
+    padding: 90px 70px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    color: #B45A6A;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* GRID */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.photo-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* BACK */
+.back {
+    display: inline-block;
+    margin-top: 60px;
+    text-decoration: none;
+    color: #B45A6A;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .photo-card img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+    }
+    .photo-card img {
+        height: 140px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Khatia Abesadze</div>
+        <a href="index.html">← დაბრუნება მთავარ გვერდზე</a>
+    </nav>
+</header>
+
+<section>
+    <h1>ჩემი ფოტოები / ხედვა</h1>
+    <p class="description"> ამ გვერდზე შეხვდებით ჩემ მიერ დაჭერილ კადრებს და დამუშავებულ ფოტოებს. 
+    მე, როგორც ჟურნალისტს, საკმაოდ დიდი პრაქტიკული ცოდნა და უნარები დამიგროვდა 
+    ფოტოჟურნალისტიკის მიმართულებითაც. ეს ფოტოები ნაწილია ჩემი ხედვისა და ნამუშევრების. 
+    საიტზე განთავსებულ ფოტოებში აღბეჭდილია თბილისის ქუჩები, საზოგადოების თავშეყრის ადგილები, 
+    მთაწმინდა, ხელოვნების ნიმუშები და ადამიანების ნამდვილი ისტორიები.
+    </p>
+
+    <div class="photo-grid">
+        <div class="photo-card"><img src="ფოტო 1.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 2.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 3.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 4.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 5.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 6.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 7.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 8.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 9.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 10.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 11.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 12.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 13.jpeg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 14.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 15.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 16.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 17.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 18.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 19.jpg" alt=""></div>
+        <div class="photo-card"><img src="ფოტო 20.jpg" alt=""></div>
+    </div>
+
+    <a href="index.html" class="back">← დაბრუნება მთავარ გვერდზე</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <img src="" alt="">
+</div>
+
+<script>
+// Lightbox ფუნქცია
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const photoCards = document.querySelectorAll('.photo-card img');
+
+photoCards.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+</script>
+
+<footer>
+    © 2026 Khatia — Journalist Portfolio
+</footer>
+
+</body>
+</html>

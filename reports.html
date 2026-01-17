@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>რეპორტაჟები / სიუჟეტები</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FBF4F6;
+    margin: 0;
+    color: #4d4d4d;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffe4f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .left {
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #a71c61;
+}
+
+header .right a {
+    text-decoration: none;
+    background-color: #d36b9a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #800040;
+    margin: 30px 0 10px;
+}
+
+.description-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 40px 60px;
+}
+
+/* CARD */
+.video-card {
+    background-color: #ffe4f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* COVER */
+.video-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: black;
+}
+
+.video-wrapper::after {
+    content: "▶";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    color: rgba(255,255,255,0.8);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+/* TEXT */
+.video-title {
+    text-align: center;
+    font-weight: bold;
+    color: #800040;
+    padding: 12px 10px 5px;
+}
+
+.video-description {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 15px 15px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal video {
+    width: 80vw;
+    max-width: 900px;
+    border-radius: 15px;
+}
+
+/* CLOSE BTN */
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="left">Khatia Abesadze</div>
+    <div class="right">
+        <a href="index.html">დაბრუნება მთავარ გვერდზე</a>
+    </div>
+</header>
+
+<h1>რეპორტაჟები / სიუჟეტები</h1>
+<p class="description-text">აქ წარმოდგენილია ჩემი ვიდეო რეპორტაჟები და სიუჟეტები.</p>
+
+<div class="video-gallery">
+
+    <div class="video-card" onclick="openVideo('v1')">
+        <div class="video-wrapper"><video></video></div>
+        <div class="video-title">რეპორტაჟი #1 - ქუჩის მხატვარი</div>
+        <div class="video-description">ჩემი პირველი ნამუშევარი არის ვიდეო ინტრო, რომელშიც 
+            აღბეჭდილია ქუჩის მხატვრის სამუშაო პროცესი. ვიდეოში დიდი ყურადღება მივაქციე 
+            მუსიკალური ელემენტებისა და კადრების თანხვედრას. ვიდეო ინტრო ზუსტად ასახავს 
+            მხატვრის სამუშაო გარემოს და თითოეულ დეტალს. 
+        </div>
+    </div>
+
+    <div class="video-card" onclick="openVideo('v2')">
+        <div class="video-wrapper"><video></video></div>
+        <div class="video-title">რეპორტაჟი #2 - ავარიული შემთხვევა თბილისში</div>
+        <div class="video-description"> ამ მოკლე რეპორტაჟზე მუშაობის დროს მომიწია 
+            საკმაოდ დიდი ხანი ვყოფილიყავი შემთხვევის ადგილას, ამ კადრების გადაღებებისას 
+            ბევრ სირთულეს შევეჩეხე, სტრესულ გარემოში მუშაობის პროცესს, ტრაგიკული შემთხვევის 
+            გაშუქებას და ა.შ. 
+        </div>
+    </div>
+
+    <div class="video-card" onclick="openVideo('v3')">
+        <div class="video-wrapper"><video></video></div>
+        <div class="video-title">რეპორტაჟი #3 - დიზანიერი</div>
+        <div class="video-description"> მსგავსი რეპორტაჟის შექმნა ერთი დიდი სიამოვნება იყო ჩემთვის, 
+            აქ აღწერილი მაქვს დიზაინერისა და მხატვრის სამუშაო დღე. რეპორტაჟში ჩანს სამუშაო გარემო, 
+            ნამუშევრები, ტექნიკურად ძალიან დამეხმარა შემერჩია სწორი რაკურსები და აქცენტი გამეკეთებინა 
+            ვიზუალურად ლამაზ კადრებზე. 
+        </div>
+    </div>
+
+    <div class="video-card" onclick="openVideo('v4')">
+        <div class="video-wrapper"><video></video></div>
+        <div class="video-title">რეპორტაჟი #4 - სტერეოტიპები </div>
+        <div class="video-description"> ეს რეპორტაჟი ეხება იმ სტერეოტიპულ შეხედულებებს, რომლებიც 
+            არსებობდა და დღემდე არსებობს ქალაქ გორში იოსებ სტალინის შესახებ. რეპორტაჟში არის საჯარო გამოკითხვები, 
+        სხვადასხვა ლოკაცია, კადრები, ვიდეოები არქივიდან და სხვ.  </div>
+    </div>
+
+</div>
+
+<!-- MODALS -->
+<div class="modal" id="v1" onclick="closeVideo(event,this)">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeVideo(event,this.closest('.modal'))">✕</span>
+        <video src="სიუჟეტი 1.mp4" controls></video>
+    </div>
+</div>
+
+<div class="modal" id="v2" onclick="closeVideo(event,this)">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeVideo(event,this.closest('.modal'))">✕</span>
+        <video src="სიუჟეტი 2.MOV" controls></video>
+    </div>
+</div>
+
+<div class="modal" id="v3" onclick="closeVideo(event,this)">
+    <div class="modal-content">
+        <span class="close-btn">✕</span>
+        <video src="სიუჟეტი 3.mp4" controls></video>
+    </div>
+</div>
+
+<div class="modal" id="v4" onclick="closeVideo(event,this)">
+    <div class="modal-content">
+        <span class="close-btn">✕</span>
+        <video src="სიუჟეტი 4.mp4" controls></video>
+    </div>
+</div>
+
+<script>
+function openVideo(id) {
+    const modal = document.getElementById(id);
+    const video = modal.querySelector("video");
+    modal.style.display = "flex";
+    video.play();
+}
+
+function closeVideo(e, modal) {
+    if (e.target.tagName === "VIDEO") return;
+    const video = modal.querySelector("video");
+    video.pause();
+    video.currentTime = 0;
+    modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>

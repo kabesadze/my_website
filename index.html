@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khatia | Journalist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #FBF4F6;
+    color: #2B2B2B;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    padding: 24px 70px;
+    background: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #B45A6A;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #B45A6A;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    padding: 90px 70px;
+    gap: 60px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text span {
+    color: #B45A6A;
+}
+
+.hero-text .role {
+    font-size: 22px;
+    color: #8C5A64;
+    margin-bottom: 18px;
+}
+
+.hero-text .desc {
+    max-width: 520px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* IMAGE */
+.hero-img {
+    position: relative;
+}
+
+.hero-img::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background: #F1D6DC;
+    border-radius: 22px;
+    z-index: 0;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 22px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 25px 45px rgba(180,90,106,0.25);
+}
+
+/* SECTIONS */
+section {
+    padding: 90px 70px;
+}
+
+.about {
+    background: #F6E6EB;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #B45A6A;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 720px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* WORK */
+.work h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #B45A6A;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+/* CONTACT */
+.contact {
+    background: #F9EDF1;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 36px;
+    background: #B45A6A;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #9E4C5C;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header, .hero, section {
+        padding: 60px 30px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img::before {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Khatia Abesadze</div>
+        <ul>
+            <li><a href="#about">ჩემ შესახებ</a></li>
+            <li><a href="#work">საქმიანობა</a></li>
+            <li><a href="#contact">კონტაქტი</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hey there,<br>I'm <span>Khatia</span></h1>
+        <div class="role">ჟურნალისტი</div>
+        <div style="font-size: larger" class="desc">
+            ჟურნალისტი ვარ, რომელსაც აინტერესებს თანამედროვე მედია, აქტუალური საზოგადოებრივი თემები და ამბების სიღრმისეული გაშუქება. ვმუშაობ ზუსტ ინფორმაციაზე, მკაფიო თხრობაზე და პასუხისმგებლიან ჟურნალისტიკაზე.
+        </div>
+
+        <div class="contact-info">
+            <p>📧 khatiaabesae@gmail.com</p>
+            <p>📞 551 533 554</p>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="khatia.jpg" alt="Khatia portrait">
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>ჩემ შესახებ</h2>
+    <p>
+        ვარ მოტივირებული და მიზანმიმართული ჟურნალისტი, გამოცდილებით ახალი ამბების, ინტერვიუებისა და ანალიტიკური მასალების მომზადებაში. განსაკუთრებულ ყურადღებას ვაქცევ ფაქტების სიზუსტეს, ეთიკურ სტანდარტებს და აუდიტორიასთან მკაფიო კომუნიკაციას. მარტივად ვმუშაობ როგორც დამოუკიდებლად, ისე გუნდში, მაქვს მუდმივი პროფესიული განვითარების სურვილი და სწრაფად ვუმკლავდები ახალ გამოწვევებს.
+    </p>
+</section>
+
+<section class="work" id="work">
+    <h2>საქმიანობა</h2>
+
+    <div class="cards">
+        <a href="articles.html" class="card-link">
+            <div class="card">
+                <h3>სტატიები / ინტერვიუები</h3>
+                <p>სოციალური და პოლიტიკური თემები</p>
+            </div>
+        </a>
+
+        <a href="sketches.html" class="card-link">
+            <div class="card">
+                <h3>ჩანახატები</h3>
+                <p>სპორტი და ყოველდღიური ცხოვრება</p>
+            </div>
+        </a>
+
+        <a href="reports.html" class="card-link">
+            <div class="card">
+                <h3>რეპორტაჟები / სიუჟეტები</h3>
+                <p>კომპლექსური თემები და ანალიზი</p>
+            </div>
+        </a>
+
+        <a href="photos.html" class="card-link">
+            <div class="card">
+                <h3>ფოტოები / ჩემი ხედვა</h3>
+                <p>ვიზუალური ნამუშევრები</p>
+            </div>
+        </a>
+
+        <a href="visualizations.html" class="card-link">
+            <div class="card">
+                <h3>ვიზუალიზაციები</h3>
+                <p>გრაფიკა და მონაცემთა ვიზუალიზაცია</p>
+            </div>
+        </a>
+
+        <a href="experience.html" class="card-link">
+            <div class="card">
+                <h3>გამოცდილება</h3>
+                <p>მედიაში მუშაობის გამოცდილება</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>დამიკავშირდი</h2>
+    <p>თანამშრომლობის ან პროექტებისთვის:</p>
+    <a href="mailto:khatiaabesae@gmail.com" class="btn">მომწერე</a>
+</section>
+
+<footer>
+    © 2026 Khatia — Journalist Portfolio
+</footer>
+
+</body>
+</html>

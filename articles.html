@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>სტატიები / ინტერვიუები</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FBF4F6;
+    margin: 0;
+    padding: 0;
+    color: #4d4d4d;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffe4f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .left {
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #a71c61;
+}
+
+header .right a {
+    text-decoration: none;
+    background-color: #d36b9a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+header .right a:hover {
+    background-color: #b94f7a;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #800040;
+    margin: 30px 0 10px;
+}
+
+.description-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ARTICLES GRID */
+.articles-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 40px 60px;
+}
+
+/* ARTICLE CARD */
+.article-card {
+    background-color: #ffe4f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 80%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.article-title {
+    background-color: #f7c7d8;
+    color: #800040;
+    padding: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.article-content {
+    display: none;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4d4d4d;
+    text-align: left;
+    background-color: #fff0f5;
+}
+
+/* PHOTOS GRID */
+.photos-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px 60px;
+    margin-top: 40px;
+}
+
+.photo-card {
+    background-color: #ffe4f0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.photo-title {
+    padding: 15px;
+    font-weight: bold;
+    color: #800040;
+    text-align: center;
+}
+
+.photo-description {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 15px 15px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe4f0;
+    color: #800040;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="left">Khatia Abesadze</div>
+    <div class="right">
+        <a href="index.html">დაბრუნება მთავარ გვერდზე</a>
+    </div>
+</header>
+
+<h1>სტატიები / ინტერვიუები</h1>
+<p class="description-text">
+აქ წარმოდგენილია ჩემი სტატიები და წერილობითი ინტერვიუები.
+</p>
+
+<div class="articles-gallery">
+
+    <!-- სტატია #1 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">"The inauguration of Georgia’s illegitimate president"</div>
+        <div style="text-align: center;" class="article-content">
+            On December 29, the inauguration of the country’s sixth president and the only candidate for the position, Mikheil Kavelashvili, took place in the parliamentary session hall. This was the first time that a presidential inauguration was held in parliament, and it was attended by no former president of the country. 
+During the inauguration process, the illegitimate president took an oath on the constitution in front of the country and the nation. He delivered an inaugural speech.                                                  “I believe this will be the year of the victory of good over evil, the unification and strengthening of our society,” – said Mikheil Kavelashvili. 
+The presidential inauguration was attended by members of the ruling party “Georgian Dream,” party chairman Bidzina Ivanishvili, the country’s Prime Minister Irakli Kobakhidze, constitutional bodies, representatives of local self-government, and the Georgian Orthodox Church. 
+Mikheil Kavelashvili’s illegitimacy is explained by the fact that he was the only candidate for president, and he was chosen solely by the “Georgian Dream” party. No one participated in the elections because the parliamentary elections were rigged by the government, and the parliament was composed of an illegitimate ruling force. 
+Simultaneously with the inauguration, Georgia’s fifth president, Salome Zurabishvili, addressed the public with a statement in front of the Orbeliani Palace. The majority of protesters were gathered near the palace, with the country’s only legitimate ruler. 
+“I carry legitimacy with me, I carry the flag with me, I carry your trust with me. We must return this palace to the Orbelians,” – stated her last words as a president of Georgia. 
+For over a month, the people have been responding to the arrival of a new president and the illegitimacy of the parliament with continuous protests. To this day, Georgian citizens continue to stand on Rustaveli Avenue to protect the country from the uneducated president and Russian ruling party. 
+
+        </div>
+    </div>
+
+    <!-- სტატია #2 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">პოდკასტი - "Confidence"</div>
+        <div style="text-align: center;" class="article-content">
+            Hey there, welcome to my podcast where we talk about how to build, embrace, and live with confidence every day. I’m Khatia, and in today’s episode, we are going to dive into three simple but powerful ways to boost your confidence, starting right now. Whether you are facing self-doubt or just looking for a little encouragement, this episode is for you! 
+So, let’s talk about confidence. It is that thing we all crave, but sometimes it feels like it is just out of reach. But the truth is, confidence is not something you are born with – it is something you create. And today, I am going to share three actionable tips to help you build it every day. 
+Tip #1 – Start with small wins
+Confidence is not built in one big leap it is built in small steps. Start by setting tiny, achievable goals. Did you get out of bed on time today? Celebrate it. Did you speak up in that meeting? That’s a win. Every small success tells your brain that you can do it, and those tiny wins grows into bigger confidence over time. 
+Tip #2 – Change your self-talk 
+One of the biggest confidence killers is negative self-talk. When you mess up, it is easy to think, “I am not good enough”. But imagine if you spoke to yourself the way you’d speak to a friend – encouraging, kind, and uplifting. So, next time you catch yourself being harsh, try switching it to something like, “I am learning”, or “I am doing my best”. Those shifts can make a big difference. 
+Tip #3 – Own your uniqueness 
+Confidence comes from accepting who you are and owning your uniqueness. Stop comparing yourself to others, because there is only one you. When you embrace what makes you different – your quirks, your experiences, your passions – you start to feel more comfortable in your own skin, and that is when real confidence shows up. 
+So, what are you going to do today to boost your confidence? Start with a small win, change up your inner dialogue, or just embrace what makes you different. And, last but not least, if you loved today’s episode, make sure to subscribe to my podcast channel on your favorite podcast platform, and share it with a friend who might need a little confidence boost today. I would also love to hear your thoughts – head over to our Instagram and drop a comment or DM me with how you are building your confidence. 
+Remember, confidence can make you much stronger, more interesting, beautiful, intelligent and courageous. It is not easy to try to be perfect, but confidence is about trusting yourself even when you don’t. keep believing, keep growing and most importantly keep showing up. This was all for today’s episode. Thanks for listening. Don’t forget to stay confident and stay you! 
+
+        
+        </div>
+    </div>
+
+    <!-- სტატია #3 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">პრესრელიზი - "Rhode Skin" </div>
+        <div style="text-align: center;" class="article-content">
+            Rhode Skin’s new product
+Beverly Hills, California, September 20th – Famous American model and businesswoman Hailey Bieber will launch a new product in her brand named “Rhode Skin” on September 20th. As she said, the new product is pocket blush. The complete collection of pocket blush will be presented in six different shades. 
+‘The pocket blush really melts into the skin, and there’s no need for a brush, that’s exactly what I wanted – a beautiful, melting texture. It really soaks into the skin and gives you that real flush look”, - says Hailey Bieber on her new product. 
+The pocket blushes are good for all skin types. The description says that it is cruelty-free, vegan and dermatologist-tested. Pocket blushes’ six shades are: “piggy”, “juice box”, “spicy marg”, “freckle”, “sleepy girl” and “toasted teddy”. A new blush stays all day on your skin. It wakes up cheeks and lips with a satiny. 
+“It is a lightweight formula that hydrates skin for baby-soft cheeks and leaves a glowy finish without a greasy face”, - is written in the product’s description.                                                            The pocket blushes will be available from 20th September as a set of six for $130 or individually for $24 at rhodeskin.com. 
+About Rhode: Rhode is a line of curated skincare essentials. Formulated for a variety of skin types and needs with high-performance ingredients. It is a daily routine that nourishes your skin barrier over time. Hailey Bieber launched the brand in June 2022. Rhode’s main values are simplicity, affordability, authenticity, quality, and transparency. The brand’s most viral products were lip tints and phone cases. For now, Rhode’s available products are lip treatments, phone cases, makeup kits, decorative cosmetics, and skincare products. I am the brand’s main PR manager and I provide customers with essential information and scheduled events. To learn more about the brand and its products, visit rhodeskin.com. If you have any questions, email Rhode at hello@rhodeskin.com or contact me at khatiaabesae@gmail.com 
+
+        </div>
+    </div>
+
+</div>
+
+<h2 style="text-align:center; margin-top:60px; color:#800040; font-size: xx-large">სტატისტიკური მონაცემები</h2>
+<p class="description-text">
+ამ ნაწილში შეხვდებით ჩემ მიერ დამუშავებულ მონაცემებს გრაფიკების სახით, რომლებზეც ვამზადებდი სტატიებს და წერილობით ინტერვიუებს. 
+</p>
+
+<div class="photos-gallery">
+    <!-- ფოტო #1 -->
+    <div class="photo-card" onclick="openModal('p1')">
+        <img src="visualisation 1.png" alt="ვიზუალიზაცია #1">
+        <div class="photo-title">სტატისტიკა #1 - კიბოს რაოდენობა </div>
+    </div>
+
+    <!-- ფოტო #2 -->
+    <div class="photo-card" onclick="openModal('p2')">
+        <img src="visualisation 3.png" alt="ვიზუალიზაცია #2">
+        <div class="photo-title">სტატისტიკა #2 - სტუდენტთა მიგრაცია </div>
+    </div>
+
+    <!-- ფოტო #3 -->
+    <div class="photo-card" onclick="openModal('p3')">
+        <img src="visualisation 4.png" alt="ვიზუალიზაცია #3">
+        <div class="photo-title">სტატისტიკა #3 - შემოსავალი სქესის მიხედვით</div>
+    </div>
+</div>
+
+<h2 style="text-align:center; margin-top:60px; color:#800040; font-size: xx-large">სტატიები/ინტერვიუები </h2>
+
+<div class="articles-gallery">
+    <!-- სტატია #4 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">"Misinformation and the Media: Who's More Vulnerable?"</div>
+        <div style="text-align: center;" class="article-content">
+            In today’s world, at the time of technology, society constantly uses social networks in order to keep themselves updated about the current news. We are also the users of media outlets, which are our main sources of information. But we need to know that information overload sometimes causes the spreading of false narratives and misinformation in various areas such as politics, sports, culture, economics, etc. 
+I believe that misinformation is spreading most perilously and widely in the political areas and platforms, where media typically has to contend with political figures. Misinformation on those platforms creates uncertainty in society and erodes public trust. On such occasions, the victims are ordinary individuals. Social platforms and media outlets that use misinformation as a tool twist facts and violate journalistic ethical and moral principles. 
+Due to the fact that the majority of users can not recognize lies, they often unknowingly fall into the trap of sharing false information and easily believe lies spread by different sources. 
+The goal of this report is to explain the situation clearly: who is most vulnerable to becoming a victim of misinformation, how we can protect ourselves against such an issue, and what methods can be used to prevent the spread of misinformation. 
+I conducted a survey about this issue with 14 participants from different age groups (18-25 and 50-65). The results of survey answered the questions I listed above. The two age groups disagree on many issues, and there are also topics where they have common opinions. 
+In the survey, from age 18 to 25 were more male (66,7%) participants than female (33,3%) and in age group of 50-65 the majority of people were female (75%) and the remaining part were male (25%). 
+From the first question, I wanted to understand the perspectives of the survey’s participants about which age group is most likely to became a victim of false information that is constantly spread on social platforms and in the media. 
+The results of the survey were similar. The majority of participants from both age groups think that people aged 18 to 29 are most vulnerable to online misinformation. They can’t tell apart misinformation from true news. 50% of 18-25-year old participants agreed with this opinion, and from the second age group, 62.5% think the same.                                                               
+I personally don’t agree with this idea. However, from the participants’ point of view, young people tend to easily believe false information, and the main reason for that is their attitude towards social platforms. They are regularly active on them, frequently scrolling. Due to this, young people receive a lot of various news and information during the day, so it is almost impossible to figure out which information is most accurate to reality. 
+The second question was asked to determine why people believe all kinds of information they see in the media. The 50-65 age group gave equal votes to “lack of access to credible news sources” and “information overload”, while the younger group chose “low media literacy”. The responses of the first group can be explained by the fact that nowadays, we truly lack access to reliable sources. We need to verify information before accepting it, as it may be false. 
+The second major factor is information overload. The 50-65 age group believes that being exposed to a large volume of content every day automatically contributes to the spread of misinformation. Responses from the younger group were completely different and focused on the need to improve education. In today’s reality, we don’t really have the opportunity to study media in depth in order to recognize false information. 
+The next question was about which type of platform spreads misinformation most rapidly. Participants aged 18-25 believe that false information spreads fastest and most widely on open social networks such as Facebook, Twitter, Instagram, etc. 
+On the other hand, participants aged 50-65 believed that government websites are the main sources of misinformation. They think that, from today’s perspective, inaccurate information often originates from government’s official pages. With this question, I wanted to understand which platforms people need to be cautious with then reading the news. The responses also help society become more aware of such risks and take action by reporting and blocking sources of misinformation. 
+In my survey, one question focused on emotional states, because I believe that if we understand the motivation behind the desire to spread false information, we can be much more effective at recognizing and addressing it. For this question, I received a variety of responses. The younger generation believes that the main emotion driving misinformation is anger (37.5%), although happiness (25%) and fear (20.8%) also had high indicators. For the majority of the older generation, the dominant emotion was also anger (62.5%) and on the second place – surprise with 25%. 
+I completely agree with this viewpoint, and I was genuinely surprised that only a few participants in the younger group chose “surprise”. I believe that when someone is surprised – especially in a negative context – they are more likely to spread false news, often in a personal way. We frequently encounter such cases on social media. 
+In the next part of the survey, I asked participants whom they trust most in situations like this. The responses were diverse. A large portion of young people consider personal friends and family members the most credible sources. (41.7%) They believe that traditional news organizations are the least reliable in such cases. (16.7%) In contrast, the older group hold the opposite view – they see traditional news outlets as the most trustworthy (62.5%), while celebrity influencers and political figures received the fewest votes (0%). 
+
+For the last question, I was curious about how we can overcome this issue, how we can protect ourselves from becoming victims, and which tools we can use to recognize false information. From the 18-25 age group, the most common response was that the key is to increase digital literacy education (33.3%). In addition, many believe it is crucial to remove all political content from social media (29.2%). In the 50-65 age group, participants also identified removing political content as the main solution (50%), with increasing digital literacy coming in second (25%). 
+As we can see from the survey, most people from the older generation believe that political pages and government organizations are the main sources of misinformation. Meanwhile, the younger generation thinks that anyone can create fake news, and it can appear anywhere. 
+To better understand each person’s position on this issue in more detail, I asked two open-ended questions, and I received quite interesting responses. 
+Question number 1 – In your opinion, which group in your country or community is currently most vulnerable to misinformation – and why? 
+18-25 aged group – “One of the most vulnerable groups to misinformation is older adults, particularly those less familiar with digital literacy. They often rely on social media or messaging apps for news but may lack the tools to critically evaluate sources, making them more susceptible to false or misleading information.” 
+“I think that old generation is very vulnerable to misinformation and I have examples in these cases like AI. Lots of people around me believes that AI videos are true. This kind of issue is very common now.” 
+50-65 aged group – “In my opinion, young adults and teenagers are the most vulnerable to misinformation due to spending a lot of time on social platforms. They also do not have enough critical thinking skills to news and also, misinformation is often presented as attractive content and it attracts and catches many young people’s attention.” 
+Question number 2 – How do you personally decide whether a piece of information you see online is true or false? 
+18-25 aged group – “I always check the source first and know if it is credible or not. I also look at the comment sections, date, etc.” 
+50-65 aged group – “I personally do not have enough knowledge to differentiate false and true information but I always look at shares, likes, comments and I also check the account.”
+In the age of communication, misinformation obscures the truth and threatens the trust factor. Fake information spreads very rapidly all over the world, and there are many reasons for its existence. It can be created for personal matters, during political conflicts, for just fun, etc.                False narratives have a huge impact on public opinion and actions, which is why it is important to identify them.  
+For the question, how and why does misinformation spread, American psychological association answered: “According to behavioral models, exposure to misinformation increases the odds that people will believe it, which in turn increases the odds that they will spread it. At the same time, people do not necessarily need to believe misinformation in order to spread it. People may share information they know is false to signal their political affiliation, disparage perceived opponents, or accrue social rewards. Psychological factors contribute significantly to this process. People are more likely to share misinformation when it aligns with personal identity or social norms, when it is novel, and when it elicits strong emotions.” (How and Why Misinformation spreads, 2023) 
+We also need to know that “misinformation spreads differently on social media than on legacy media such as television, radio, and newspapers. Mainstream news outlets tend to have robust safeguards in place to prevent and correct false claims, but several unique features of social media encourage viral content with low oversight.” (How and Why Misinformation spreads, 2023)
+As I already mentioned, becoming a victim of false information is extremely common nowadays. Professor of university of Melbourne Andrew Perfors explains why. “There are one big fundamental reason why misinformation is a bigger problem than ever before. This is tied to rise of the internet and social media. Where once only the richest and most powerful could spread their ideas widely, now the vast majority of people can do so at the click of a button.” (Pursuit, 2022)
+I discussed this issue with 2 different age groups. Some people from those categories believed that age has big impact on how we receive information from social platforms. Research held by “UVAToday” finds that younger adults are more vulnerable to misinformation than older ones.                     “We wanted to see the difference between younger adults and older adults in terms of their ability to detect misinformation. We discovered something super cool and interesting… older adults are actually less vulnerable to misinformation than younger adults. That’s surprising because literature has shown that historically, older adults share more misinformation, especially using Facebook. But in terms of believing or the capacity to differentiate fake news generated by AI and real news headlines, older adults are better than younger adults.“ (UVAToday, 2024)
+Besides everything, learning how to sport misinformation is the most essential skill we all need to have. Unicef organization gives us tips for fact-checking, staying inform and talking it out:
+1.	Foster a diverse news media ecosystem – getting your news from multiple sources and outlets allows a wide range of information to come into your regular news content; 
+2.	Critically assess the credibility of sources – when in doubt, choose which information requires further investigation or follow-up questions. With information that comes from social media, tracing back the information to the original source is a great way to fight misinformation; 
+3.	Amplify the voices of experts – support real experts who are distinguished in their field; 
+4.	Address the rumors and explain why they are incorrect – once you have the facts in your hands, be straightforward and succinct. (Unicef, 2025 )
+And for the last part, global study held by freelance journalist Denis Storey reveals that: 
+•	“Education is a strong defense, with higher degrees correlating to better misinformation detection. Political conservatism and overconfidence often increased susceptibility;” 
+•	“Gender differences emerged: men outperformed others but often overestimated their skills, while women were more accurate in self-assessment.” 
+•	“Researchers urge governments to use tools like MIST in public education and policy to combat misinformation globally, especially in democratic societies.” (Storey, 2025)
+In my opinion, as I already said, one of the biggest problems in the modern world is the spread of misinformation and the entrapment of people in it. I believe that now that everything is evolving and changing, it is not so complex to establish correct, professional methods so that the public can easily identify false narratives and help eliminate the sources. I believe that determining which age group is the real victim of fake news will help society to work on this issue and have enough courage to manage the situation. 
+Besides that, one more crucial factor is to know what is the main reason why misinformation spreads everywhere widely and rapidly. I think that controlling various platforms is key in the cases like this. From my point of view, for today’s reality, it is essential for all platforms, especially for open social networks, to have a credible fact-checker which gives us the opportunity to receive reliable and true information on time. But for me, it is not only about social platforms and media, I think that we should start improving ourselves. We need to have a good educational system which provides people with high-quality digital media literacy. If we don’t know how to differentiate fake news from real-life events, we will always struggle with that problem. Not only technological development is key in these cases. 
+For me personally, the most effective way to reduce an individual’s susceptibility to misinformation is to increase digital literacy. Removing any kind of content from the internet is not a solution. The 21st century is a technological period, so there will always be information diversity and information overload, and we can’t change that. However, we can change our skills and perspectives and begin to develop by working on ourselves. 
+To conclude, misinformation is a serious issue that affects society on many levels. Social networking sites and news organizations are major players in its spread, but individuals have a responsibility too. With increased digital literacy, fact-checking, and education systems, we can get more resilient against misinformation and protect ourselves and others from its adverse effects. 
+
+        </div>
+    </div>
+
+    <!-- სტატია #5 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">"ყალბი ინფორმაცია და მანიპულაცია პოლიტიკურ პროცესებში"</div>
+        <div style="text-align: center;" class="article-content">
+            კავშირგაბმულობის ეპოქაში დეზინფორმაცია ჩქმალავს სიმართლეს და საფრთხეს უქმნის ნდობის ფაქტორს. ყალბი ინფორმაცია მსოფლიოს გარშემო ძალიან სწრაფად ვრცელდება  და მის არსებობას ბევრი მიზეზი განაპირობებს. ცრუ ინფორმაცია ერთ-ერთი ყველაზე გავრცელებულია პოლიტიკურ პროცესებში პირადი ინტერესებისა თუ პოლიტიკური მისწრაფებების დაკმაყოფილების მიზნით. მსგავსი ცრუ ნარატივები უდიდეს გავლენას ახდენს საზოგადოებრივ აზრსა თუ ქმედებებზე და სწორედ ამიტომაა მნიშვნელოვანი მათი ამოცნობა. 
+დეზინფორმაციის მაგალითები მრავლადაა ქართულ პოლიტიკაში. აუცილებლად უნდა შევეხო რელიგიური თემებით მანიპულირებას წინასაარჩევნო კამპანიის დროს (მითების დეტექტორი). 2020 წლის წინასაარჩევნო პერიოდში საზოგადოების ნდობის მოსაპოვებლად და ოპოზიციური პარტიების დაკნინების მიზნით, მმართველმა ძალამ, „ქართულმა ოცნებამ“ ოპოზიციის მხარეები მართლმადიდებელი ეკლესიის წინააღმდეგ ბრძოლასა და საქართველოს პატრიარქის დისკრედიტაციაში დაადანაშაულა. ამ ცრუ ნარატივებს ავრცელებდნენ პროსახელისუფლებო ონლაინ ვებ-გვერდები თუ სოციალური ქსელები. უმეტესად მსგავსი შინაარსის დეზინფორმაციული მასალები გვხვდებოდა ისეთ არხებზე როგორიცაა მაგალითად: “POSTV”, (“ნაცმოძრაობა ეკლესიის წინააღმდეგ – ნაციონალებს პატრიარქის პოპულარობის მაჩვენებელი აწუხებს”)  სახელისუფლებო არხი, რომელიც რუსულ იდეოლოგიას ემყარება და ამას არც მალავს. 	2020 წლის წინა საარჩევნო პერიოდში ასევე ყურადღების ცენტრში მოექცა თბილისის მერის, კახი კალაძის მიერ წამოწყებული კამპანია,  რომელიც მიზნად ისახავდა ოპოზიციის „დეზინფორმაციის“ გაფანტვას. რეალურად კი თავად ცდილობდა საზოგადოებაზე მანიპულირებას ცრუ ნარატივებით.  დეზინფორმაციული ქსელების გამოყენება ხშირად ხდება არჩევნების გაყალბების მიზნით, ეს საქართველოშიც არა ერთხელ მომხდარა. არც 2024 წლის წინა საარჩევნო პროცესია ამ მხრივ გამონაკლისი.  სხვადასხვა მაღალრეიტინგულ არხებსა და მათ სოციალურ გვერდებზე გავრცელდა ინფორმაცია „ოცნების“ პოლიტიკური მანიპულაციის შესახებ. როგორც გაირკვა, მმართველი ხელისუფლება ასაქმებს ადამიანებს, რომლებსაც აქვთ სოციალურად დაუცველის სტატუსი.  ფინანსების გამოყენებით „ქართული ოცნება“ ხალხის ხმების მოპოვებას ცდილობს საქართველოს სხვადასხვა რეგიონში. მსგავსი ტიპის კამპანიები ძალიან მომრავლდა სოციალურ ქსელებშიც. იქმნება გვერდები და პლატფორმები, რომლებზეც სხვადასხვა პარტიაზე ანონიმურად იწერება ცრუ ინფორმაცია. ასეთ გვერდებზე ვხვდებით მოწოდებითი ხასიათის განცხადებებსა და სტატუსებს. სწორედ მსგავსი მიზეზების გამო წაშალა ფეისბუქმა არა ერთი ყალბი სახელისუფლებო გვერდი და ანგარიში სოციალური მედიიდან.  ამ გვერდებიდან ვრცელდებოდა მანიპულაციური ხასიათის სტატუსები და ინფორმაცია. ნათელია, რომ ასეთი ძლიერი დეზინფორმაციული ქსელის უკან ხელისუფლების ძალაუფლება ფიგურირებს, პოლიტიკური პროცესების თავის სასიკეთოდ მორგების მიზნით. მსგავსი შემთხვევები არა მხოლოდ საქართველოში, არამედ სხვა ქვეყნებშიც მრავლადაა.  ერთ-ერთი ყველაზე გახმაურებული და მასშტაბური ცრუ ნარატივები გავრცელდა 2020 წლის ამერიკის შეერთებული შტატების საპრეზიდენტო არჩევნებზე. (ფაქტ-მეტრი) ეს ყალბი ინფორმაცია საკმაოდ დიდხანს ტრიალებდა საზოგადოებაში, თუმცა მრავალი კვლევისა და მტკიცებულების შემდეგ, არჩევნების სამართლიანობა დამტკიცდა. საპრეზიდენტო არჩევნების გაყალბებაზე არა ერთხელ შეიტანა საჩივარი ამერიკის შეერთებული შტატების ყოფილმა პრეზიდენტმა, დონალდ ტრამპმა, თუმცა მისი ბრალდებები არ დადასტურდა. ეს ინფორმაცია გადამოწმდა ბევრი სანდო წყაროს მიერ (საერთაშორისო სადამკვირვებლო მისიის ანგარიში, ამერიკის უზენაესი სასამართლო, ფაქტების გადამმოწმებელი პლატფორმები და სხვ.).  დეზინფორმაციისა და ყალბი ნარატივების საჯაროდ გავრცელებაში კონკურენტი არ ჰყავს რუსეთს, ეს არის სახელმწიფო, რომელიც წლების განმავლობაში აშუქებდა ყალბ ინფორმაციას ამა თუ იმ ქვეყნის შესახებ, კრემლის ინტერესების გათვალისწინებით. განსაკუთრებით აქტუალური იყო რუსეთ-უკრაინის ომის პერიოდში მათ მიერ სახელმწიფო ინტერესებისთვის გამოყენებული ცრუ მასალები და ინფორმაცია. ერთ-ერთი ასეთი იყო რუსულ მედიაში გავრცელებული დეზინფორმაცია, რომლის თანახმადაც რუსეთმა უკრაინაში ამერიკული himars-ები და სარაკეტო სისტემები გაანადგურა, ასევე მსგავსი ხასიათის ინფორმაციაა გავრცელებული რუსეთის თავდაცვის სამინისტროს მიერ, რომელიც გვეუბნება, რომ საკითხი სხვადასხვა ტიპის საშიშ ექსპერიმენტებს ეხება. როგორც ინფორმაციიდან ირკვევა რუსეთი ამერიკის შეერთებულ შტატებს ადანაშაულებს სხვადასხვა მედიკამენტების ადამიანებზე დატესტვაში. როგორც გამოირკვა, ეს რუსეთის ხელისუფლების კიდევ ერთი მანიპულაციური განცხადებაა, რომელიც ეწინაააღმდეგება პროდასავლურ რიტორიკას და ცდილობს საზოგადოებაც ამ რაკურსით მიმართოს. მსგავსი შემთხვევები იყო ქართულ ვებ-გვერდებზეც, კერძოდ, ერთ-ერთი ანგარიშის („ფიცხელა ფიცხელაურის“) მიერ გამოქვეყნდა სტატია, რომელშიც ვკითხულობთ, რომ რუსეთ-უკრაინის ომი ამერიკამ წამოიწყო. „ფაქტ-მეტრის“ მიერ გადამოწმებული მასალებით დასტურდება, რომ ამ ტიპის ინფორმაცია აგებულია მანიპულაციაზე და მასში სიმართლის მარცვალი არ ურევია.   
+ ჩემი მაგალითებიდან გამომდინარე ვხვდებით, რომ აუცილებელია ვისწავლოთ ცრუ ნარატივების ამოცნობა, რათა არ გავებათ დეზინფორმაციული ქსელების მახეში.                                                                                                   
+
+        </div>
+    </div>
+
+    <!-- სტატია #6 -->
+    <div class="article-card" onclick="toggleArticle(this)">
+        <div class="article-title">ინტერვიუ - „რუსული კანონი - საფრთხე საზოგადოებისთვის“ </div>
+        <div style="text-align: center;" class="article-content">
+            ჩემი რესპონდენტი „რუსულ კანონზე“ სასაუბროდ გახლდათ პოლიტიკოსი, თბილისის საკრებულოსა და პოლიტიკური პარტია „გირჩი - მეტი თავისუფლების“ წევრი, ცოტნე კობერიძე. მასთან ინტერვიუს ჩაწერის სურვილი გამიჩნდა იმიტომ,  რომ ცოტნე აქტიურადაა ჩართული რუსული კანონის წინააღმდეგ ბრძოლაში, არის წარმატებული პოლიტიკურ სფეროში, გახლავთ ახალგაზრდა და საინტერესო პიროვნება განსხვავებული ხედვებით.  
+ჟურნალისტი: 2023 წლის მარტის აქციებისა და ხელისუფლების მიერ კანონპროექტის ჩაგდების შემდეგ ელოდებოდით თუ არა, რომ „ქართული ოცნება“ კანონს უკან დააბრუნებდა და ქართველ ხალხს კვლავ ამ პრობლემის წინაშე დადგომა მოუწევდა?                                                         რესპონდენტი: ზოგადად, მოლოდინი მაქვს ხოლმე, რომ „ქართული ოცნება“ პირობებს დაარღვევს, თუმცა ნამდვილად არ მეგონა ისევ ამ რეალობას თუ შევეჩეხებოდით და კანონი კვლავ დაბრუნდებოდა, მაგრამ არც მიკვირს, ყველაფერი ეს გარედანაა დავალებული და „ქართული ოცნებაც“ დავალებებს პირნათლად ასრულებს.                                                                                                              ჟურნალისტი: იმ მოვლენების ფონზე, როცა ამერიკა სანქციების დაწესებას აპირებს, გვემუქრება უვიზო რეჟიმის შეჩერება, ხელისუფლებამ მიიღო ვენეციის კომისიის მკაცრი რეკომენდაცია, რას ფიქრობთ, შესაძლებელია თუ არა მმართველმა ძალამ უკან დაიხიოს და განიხილავთ თუ არა იმ ფაქტს, რომ ვეტო საერთოდ ვერ დაიძლიოს?                                                                                                                                                                          რესპონდენტი: შესაძლებელია ყველაფერი დავუშვათ, რადგან პოლიტიკა ზუსტი მეცნიერება არაა, თუმცა მოლოდინი ნაკლები მაქვს. თუ გაჩნდება 84 დეპუტატის დასანქცირების საშიშროება, შესაძლებელია პარტია შიგნიდან, ინდივიდუალურად გატყდეს. თუ დასანქცირებულებს შორის უმეტესად მაღალჩინოსნები იქნებიან, ბიძინა ივანიშვილი მოახერხებს მათ დაყოლიებას, ამ ადამიანებს დაჰპირდება ფინანსურ და ეკონომიკურ უსაფრთხოებას. მიუხედავად ამ ყველაფრისა, მაინც მგონია, რომ ვეტოს დაძლევა მკაფიოდაა გადაწყვეტილი. „ქართული ოცნება“ ძალიან ჩქარობს და ამ სიჩქარეს მათთვის დიდი სარგებელი მოაქვს.                                                                                       ჟურნალისტი: დღევანდელ რეალობაში, როცა ქვეყანაში ვრცელდება სანქციები, სხვადასხვა სახელმწიფო იღებს შემზღუდავ ზომებს საქართველოს წინააღმდეგ, გვაქვს ეკონომიკური კრიზისი და შეფერხება ევროინტეგრაციის გზაზე. უფრო კონკრეტულად რომ გვითხრათ, როგორ შეიძლება შეეხოს ეს და სხვა უარყოფითი შედეგები რიგით მოქალაქეებს?                                                                                    რესპონდენტი: ეს ცვლილებები პირდაპირ აისახება ფიზიკურ პირებზე, მედია პოლიტიკაზე. შეეხება ისეთ ადამიანებს, რომლებიც ქმნიან კონტენტს, რისთვისაც იყენებენ დამოუკიდებელი დაფინანსების წყაროებს. კანონი ზოგადად აისახება ქვეყნის დემოკრატიულ მოწყობაზე. დასანქცირებული ხელისუფლების შემდეგ კი საზოგადოებას აღარ ექნება არანაირი ბერკეტი, რითაც შეაჩერებს მის სამომავლო ნაბიჯებს, რადგან „ქართულმა ოცნებამ“ უკვე განაცხადა, რომ ის ევროპას აღარ უსმენს. შეიქმნება სერიოზული სუვერენული პრობლემა, ამის შედეგად კი მივიღებთ მკაცრ ავტორიტარიზმს, ტოტალიტარიზმის ცხადი ნიშნებით.                                                                                    ჟურნალისტი: სტუდენტებისა და ლექტორების გაფიცვის შემდეგ, რომელი პროფესიის ადამიანებისგან ელოდით უფრო ხმამაღალ პროტესტს, რასაც ამ ბრძოლაში შესაძლებელია ბევრი რამ გადაეწყვიტა?                                                                                                                                                      რესპონდენტი: ასეთები, ცხადია, არიან აზრის ინფლუენსერები, რომლებსაც ძალიან დიდი აუდიტორია ჰყავთ. ასევე სპორტსმენები, განსაკუთრებით ფეხბურთელები. ასეთი ადამიანები ემიჯნებიან პარტიულ პოლიტიკას, რაც გულისხმობს საზოგადოებისგან მათ მიმართ მეტ სანდოობას. მაგალითად, შოთა არველაძემ ამ საკითხზე ძალიან მკაფიო განცხადება გააკეთა, რასაც ვერ ვიტყვი სხვებზე. სპორტსმენების უმეტესობა გამოირჩეოდა ბუნდოვანებით, რაც, ჩემი აზრით, არასწორია. პროპაგანდისტულ ომში ამ ადამიანებს ბევრად მეტი მოეთხოვებათ.                                             ჟურნალისტი: რას ფიქრობთ, როგორი იქნება „ქართული ოცნების“ მომავალი და რა არის თქვენი პარტიის გეგმა თუ ვეტო დაიძლევა?                                                                                                    რესპონდენტი: ისინი მთლიანად კონცენტრირდებიან ძალაუფლების შენარჩუნებაზე, მოიმატებს დაკავებები და ადამიანებზე ძალადობა. „ქართული ოცნება“ ბოლომდე ჩაჰყვება ბიძინას და მის ინტერესებს. ჩვენი პარტია ხშირად საუბრობს გაერთიანებაზე, მალე გაირკვევა რა კონფიგურაციით გავალთ არჩევნებზე, პირადად მე ყველაფრისთვის მზად ვარ.                                             ჟურნალისტი: მაინტერესებს თქვენი, როგორც ერთ-ერთი პარტიის წევრის, მოლოდინები წლევანდელ არჩევნებზე და როგორ გგონიათ, რა შეიძლება აღმოჩნდეს გადამწყვეტი ფაქტორი იმისათვის, რომ „ქართულმა ოცნებამ“ 12 წლიანი მმართველობა ვეღარ გააგრძელოს?                                                                                                                       რესპონდენტი: მთავარი პრობლემა, რაც ახლა გვაქვს, არის ის, რომ გვყავს არაფორმალური მმართველი, რომელიც ფაშასავითაა გაბატონებული. ჩვენი, ყველას, მთავარი მიზანი უნდა იყოს ფაშას მოშორება. არ შეიძლება მმართველად 12 წელზე მეტხანს გვყავდეს კაცი, რომელიც არც კი ვიცით სად არის, ჩვენ ვხედავთ მის მხოლოდ პირველ და მეორე პირებს, რომლებიც საჯარო გამოსვლების დროს ყოველთვის ამ ერთ ადამიანს აქებენ. მთავარი ასეთ დროს არის ადამიანების ამბიცია, ამბიციურმა ხალხმა მინიმუმ უნდა ცვალოს ხელისუფლება. ვინც არ უნდა მოვიდეს მომავალში ქვეყნის სათავეში, უნდა გვახსოვდეს, რომ ცვლა ყოველთვის სჯობს ურყეობას. 
+
+        </div>
+    </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal" id="p1" onclick="closeModal(this)">
+    <img src="visualisation 1.png" alt="ვიზუალიზაცია #1">
+</div>
+<div class="modal" id="p2" onclick="closeModal(this)">
+    <img src="visualisation 3.png" alt="ვიზუალიზაცია #2">
+</div>
+<div class="modal" id="p3" onclick="closeModal(this)">
+    <img src="visualisation 4.png" alt="ვიზუალიზაცია #3">
+</div>
+
+<footer>
+© 2026 Khatia — Journalist Portfolio
+</footer>
+
+<script>
+function toggleArticle(card) {
+    const content = card.querySelector('.article-content');
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+}
+
+function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "flex";
+}
+
+function closeModal(el) {
+    el.style.display = "none";
+}
+</script>
+
+</body>
+</html>
